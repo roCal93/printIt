@@ -1,11 +1,11 @@
-// Display img function 
+// Display img & txt function 
 function displayImgTxt(actualPosition, list) {
   // Img
   const img = document.querySelector(".banner-img")
   img.src = `./assets/images/slideshow/${list[actualPosition]["image"]}`
   // Txt
   const txt = document.querySelector("#banner p")
-  const txtP = `<p>${list[actualPosition]["tagLine"]}<p>`
+  let txtP = `<p>${list[actualPosition]["tagLine"]}<p>`
   txt.innerHTML = txtP
 }
 
@@ -13,7 +13,7 @@ function displayImgTxt(actualPosition, list) {
 function dotsIntegration() {
   const dots = document.querySelector(".dots")
   for (let i = 0; i < slides.length; i++) {
-    const dot = document.createElement("div")
+    let dot = document.createElement("div")
     dot.classList.add("dot")
     if (i === 0) {
       dot.classList.add("dot_selected")
@@ -40,7 +40,7 @@ function dotSelected(actualPosition) {
 function goCarousel () {
 const arrowLeft = document.querySelector(".arrow_left")
 const arrowRight = document.querySelector(".arrow_right")
-const max = slides.length -1 //because we start with the first banner
+let max = slides.length -1 //because we start with the first banner
 let index = 0
 
 dotsIntegration()
