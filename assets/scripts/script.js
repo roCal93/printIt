@@ -2,10 +2,10 @@
 function displayImgTxt(actualPosition, list) {
   // Img
   const img = document.querySelector(".banner-img")
-  img.src = `./assets/images/slideshow/${list[actualPosition]["image"]}`
+  img.src = `./assets/images/slideshow/${list[actualPosition].image}`
   // Txt
   const txt = document.querySelector("#banner p")
-  let txtP = `<p>${list[actualPosition]["tagLine"]}<p>`
+  let txtP = `<p>${list[actualPosition].tagLine}<p>`
   txt.innerHTML = txtP
 }
 
