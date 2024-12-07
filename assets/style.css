@@ -130,10 +130,12 @@ header {
 #banner .arrow_left {
 	position: absolute;
 	left: 40px;
+	cursor: pointer;
 }
 #banner .arrow_right {
 	position: absolute;
 	right: 40px;
+	cursor: pointer;
 }
 /* Gestion des points du carrousel */
 .dots {
